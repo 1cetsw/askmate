@@ -1,0 +1,6 @@
+{% extends "layout.html" %} {% block title %}DISPLAY QUESTION{% endblock %} {% block head %} {{ super() }} {% endblock %}
+
+{% block body %}
+<h1>Display Question</h1><br>
+<form action="{{ url_for('route_edit_result') }}" method="post">
+{% endblock %}

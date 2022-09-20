@@ -1,0 +1,5 @@
+{% extends "layout.html" %} {% block title %}Add New Question{% endblock %} {% block head %} {{ super() }} {% endblock %}
+<form method=post enctype=multipart/form-data>
+    <input type=file name=file required name="image">
+    <input type=submit value=Upload>
+</form>

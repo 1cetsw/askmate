@@ -1,0 +1,84 @@
+
+td, th {
+    border: 2px solid black;
+}
+
+::selection {
+    color: #fff;
+    background: #FCBA7F;
+}
+
+body {
+    background-image: url("/static/images/background_list.jpg");
+    width: 99%;
+    height: 100%;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-color: lightgrey;
+    color: black;
+}
+
+h2 {
+    margin: 5px;
+    padding: 5px;
+}
+
+h1{
+    color:#fd7e14;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+h3 {
+     color:#fd7e14;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    text-align: center;
+}
+
+table {
+    margin: 10px;
+    padding: 10px;
+    color: black;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+nav {
+    margin: 10px;
+    padding: 10px;
+}
+
+vote_button {
+   position: -ms-device-fixed; z-index: 100;
+
+}
+
+
+footer {
+    font-size: 30px;
+}
+
+
+
+upload {
+    background-color: #177199;
+}
+
+
+col1 {
+    color: #c2c2c2;
+    font-weight: bold;
+}
+
+col2 {
+    color: #fd7e14;
+    font-weight: bold;
+}
+div_qoute {
+    text-align: center;
+     color: #fd7e14;
+
+    font-weight: bold;
+}
