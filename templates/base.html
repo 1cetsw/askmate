@@ -11,7 +11,7 @@
 </head>
 
 <body>
-{% include 'widget.html' %}
+
 <div style="text-align: center;"><a href="/"><img alt="logo" src="/static/images/ask_logo.png"
                                                   width="35%" height="35%"></a></div>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
@@ -45,6 +45,7 @@
                    aria-label="Search" required>
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
+        <div style="text-align: center;">{% include 'widget.html' %}</div>
     </div>
 </nav>
 {% block body %}
@@ -61,14 +62,14 @@
         crossorigin="anonymous"></script>
 </body>
 <footer>
+{% include 'menu_social.html' %}
     {% block fooster %}
         <div style="text-align: center;">
             <footer id="footer">
-                <col1>Ask</col1>
-                <col2>Mate</col2>
-                Project CodeCool 2022
+                <marquee behavior="scroll" direction="left"><col1>Ask</col1>
+                <col2>Mate</col2> Project CodeCool 2022</marquee>
             </footer>
         </div> {% endblock %}
 </footer>
-
+<a class="nav-link" href="{{ url_for('ester_egg') }}"><marquee behavior="scroll" direction="left">ester_egg</marquee></a>
 </html>

@@ -8,7 +8,7 @@ latest_opened_question_id = 0
 
 @app.route('/')
 def index():
-    latest_questions = data_manager.get_latest_questions(5)
+    latest_questions = data_manager.get_latest_questions(9)
     return render_template('index.html', questions=latest_questions)
 
 
@@ -188,6 +188,10 @@ def delete_comment(comment_id):
     global latest_opened_question_id
     return redirect(url_for('display_question', question_id=latest_opened_question_id))
 
+@app.route('/ester_egg')
+def ester_egg():
+
+    return render_template('ester_egg.html')
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
