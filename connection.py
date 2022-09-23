@@ -3,7 +3,9 @@
 import os
 import psycopg2
 import psycopg2.extras
+DATABASE_URL = os.environ['DATABASE_URL']
 
+conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 def get_connection_string():
     # setup connection string
