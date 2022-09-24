@@ -328,7 +328,7 @@ div.troll__right-hand, div.troll__left-hand {
 /* Dark Mode */
 @media screen and (prefers-color-scheme: dark) {
 	body {
-		background: #ffffff;
+		background: #fcfcfc;
 	}
 	.troll__head div {
 		background: #000000;
