@@ -6,8 +6,8 @@ app = Flask(__name__)
 latest_opened_question_id = 0
 
 
-@app.route('/')
-@app.route('/index')
+@app.route("/")
+@app.route("/index")
 def index():
     latest_questions = data_manager.get_latest_questions(5)
     return render_template('index.html', questions=latest_questions)
