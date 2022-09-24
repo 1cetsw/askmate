@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Welcome!{% endblock %}
+{% block title %}Hello!{% endblock %}
 {% block head %}
     {{ super() }}
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css'
@@ -7,10 +7,11 @@
           crossorigin='anonymous'>
 {% endblock %}
 {% block body %}
+    <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
     <h1>Questions</h1>
-    <table class="table table-hover table-dark">
+    <table id="myTable" class="table table-hover table-dark sortable">
         <thead>
-        <tr>
+        <tr class="item">
             <th scope="col">ID</th>
             <th scope="col">Question</th>
             <th scope="col">Edit</th>
