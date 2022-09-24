@@ -22,9 +22,9 @@ def get_connection_string():
             host=host,
             database_name=database_name
         )
-    # else:
-    #     raise KeyError('Some necessary environment variable(s) are not defined')
-    return 'postgres://wppqufqckfzncd:22447b2da195dfcca0a25aea69f204faade25399ffee50fc5eadc90f057b2158@ec2-52-212-228-71.eu-west-1.compute.amazonaws.com:5432/dbrtlauqtpf6vt'
+    else:
+        raise KeyError('Some necessary environment variable(s) are not defined')
+    # return 'postgres://wppqufqckfzncd:22447b2da195dfcca0a25aea69f204faade25399ffee50fc5eadc90f057b2158@ec2-52-212-228-71.eu-west-1.compute.amazonaws.com:5432/dbrtlauqtpf6vt'
 
 def open_database():
     try:
