@@ -17,18 +17,18 @@ font-size:20px;
 
 
 .main-menu:hover,nav.main-menu.expanded {
-width:250px;
+width:1px;
 overflow:visible;
 }
 
 .main-menu {
 
 
-position:absolute;
+position:fixed;
 top:1px;
 bottom:0;
 height:100%;
-right:5px;
+right:0px;
 width:60px;
 overflow:hidden;
 -webkit-transition:width .05s linear;

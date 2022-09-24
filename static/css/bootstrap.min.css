@@ -49,6 +49,7 @@ table {
     color: black;
     border-collapse: collapse;
     table-layout: auto;
+    z-index:6;
 }
 
 nav {
