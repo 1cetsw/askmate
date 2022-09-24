@@ -1,6 +1,7 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
+
 .fa-2x {
 font-size: 2em;
 }
@@ -89,22 +90,6 @@ bottom:0;
 overflow-y:hidden;
 }
 
-/*.no-touch .scrollable.hover:hover {*/
-/*overflow-y:auto;*/
-/*overflow:visible;*/
-/*}*/
-
-/*a:hover,a:focus {*/
-/*text-decoration:none;*/
-/*!*}*!*/
-
-/*nav {*/
-/*-webkit-user-select:none;*/
-/*-moz-user-select:none;*/
-/*-ms-user-select:none;*/
-/*-o-user-select:none;*/
-/*user-select:none;*/
-/*}*/
 
 nav ul,nav li {
 outline:0;

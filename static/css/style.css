@@ -10,8 +10,6 @@ td, th {
 
 body {
     background-image: url("/static/images/background_list.jpg");
-    width: 99%;
-    height: 100%;
     background-attachment: fixed;
     background-size: 100% 100%;
     background-color: lightgrey;
@@ -79,6 +77,5 @@ col2 {
 div_qoute {
     text-align: center;
      color: #fd7e14;
-
     font-weight: bold;
 }
