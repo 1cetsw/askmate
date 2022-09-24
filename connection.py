@@ -22,8 +22,8 @@ def get_connection_string():
             host=host,
             database_name=database_name
         )
-    else:
-        raise KeyError('Some necessary environment variable(s) are not defined')
+    # else:
+    #     raise KeyError('Some necessary environment variable(s) are not defined')
 
 
 def open_database():

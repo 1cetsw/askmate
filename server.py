@@ -12,7 +12,7 @@ def index():
     return render_template('index.html', questions=latest_questions)
 
 
-@app.route('/list')
+@app.route("/list")
 def route_to_all_questions():
     sorted_questions = data_manager.sort_questions_by_time()
     return render_template('all_questions.html', questions=sorted_questions)
@@ -194,4 +194,4 @@ def ester_egg():
     return render_template('ester_egg.html')
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run()
