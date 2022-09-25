@@ -5,7 +5,7 @@
     <div class="form-group col-md-4">
         <h1>Adding a new answer</h1>
         <form action="{{ url_for("add_new_answer", question_id=question_id) }}" method="post">
-            <label for="new_answer">Type your answer in the textarea below and submit it with the "Add new answer" button!</label>
+            <h3><label for="new_answer">Type your answer in the textarea </label></h3>
             <br>
             <textarea id="new_answer" name="new_answer" class="form-control" minlength="10" required></textarea>
             <br>

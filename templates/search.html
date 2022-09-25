@@ -7,10 +7,10 @@
           crossorigin='anonymous'>
 {% endblock %}
 {% block body %}
-<h1>Results of searching for "{{ search_phrase }}"</h1>
+<h3>Results of searching for "{{ search_phrase }}"</h3>
 {% if (questions is defined) and questions %}
 <br>
-<h2>In questions:</h2>
+<h3>In questions:</h3>
 <table class="table table-hover table-dark">
     <tr>
         <th>ID</th>
@@ -31,14 +31,14 @@
             <td>{{ question['title'] }}</td>
             <td>{{ question['message'] }}</td>
             <td>{{ question['image'] }}</td>
-            <td><a href="{{ url_for('display_question', question_id=question['id']) }}">See question</a></td>
+            <td><a href="{{ url_for('display_question', question_id=question['id']) }}">Open question</a></td>
         </tr>
     {% endfor %}
 </table>
 {% endif %}
 {% if (answers is defined) and answers %}
 <br>
-<h2>In answers:</h2>
+<h3>In answers:</h3>
 <table class="table table-hover table-dark">
     <th>
         <td>ID</td>
@@ -56,11 +56,11 @@
             <td>{{ answer['question_id'] }}</td>
             <td>{{ answer['message'] }}</td>
             <td>{{ answer['image'] }}</td>
-            <td><a href="{{ url_for('display_question', question_id=answer['question_id']) }}">See question</a></td>
+            <td><a href="{{ url_for('display_question', question_id=answer['question_id']) }}">Open question</a></td>
         </tr>
     {% endfor %}
 </table>
 {% endif %}
 <br>
-<a href="{{ url_for('index') }}">Back to home</a>
+
 {% endblock %}
