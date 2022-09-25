@@ -1,7 +1,6 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
-
 .fa-2x {
 font-size: 2em;
 }
@@ -17,19 +16,19 @@ font-size:20px;
 
 
 .main-menu:hover,nav.main-menu.expanded {
-width:1px;
+width:250px;
 overflow:visible;
 }
 
 .main-menu {
 
-
-position:fixed;
-top:1px;
+border-left:1px;
+position:absolute;
+top:0;
 bottom:0;
-height:100%;
-right:0px;
-width:60px;
+height:25%;
+left:90%;
+width:65px;
 overflow:hidden;
 -webkit-transition:width .05s linear;
 transition:width .05s linear;
@@ -38,13 +37,13 @@ z-index:1000;
 }
 
 .main-menu>ul {
-margin:1px 0;
+margin:7px 0;
 }
 
 .main-menu li {
 position:relative;
 display:block;
-width:245px;
+width:250px;
 }
 
 .main-menu li>a {
@@ -53,7 +52,7 @@ display:table;
 border-collapse:collapse;
 border-spacing:0;
 color:#999;
-  font-family: arial, serif;
+ font-family: arial;
 font-size: 14px;
 text-decoration:none;
 -webkit-transform:translateZ(0) scale(1,1);
@@ -90,6 +89,22 @@ bottom:0;
 overflow-y:hidden;
 }
 
+.no-touch .scrollable.hover:hover {
+overflow-y:auto;
+overflow:visible;
+}
+
+a:hover,a:focus {
+text-decoration:none;
+}
+
+nav {
+-webkit-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+-o-user-select:none;
+user-select:none;
+}
 
 nav ul,nav li {
 outline:0;
@@ -97,12 +112,12 @@ margin:0;
 padding:0;
 }
 .main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
-color: #676767;
-background-color: rgba(243, 105, 2, 0.88);
+color:#fff;
+background-color: #ff7d00;
 }
 .area {
 float: right;
-background: #6e6d6d;
+background: #e2e2e2;
 width: 100%;
 height: 100%;
 }
