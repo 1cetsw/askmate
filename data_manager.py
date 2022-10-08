@@ -302,6 +302,20 @@ def vote_down_for_answers(cursor, answer_id):
                    {'id': answer_id})
 
 
+
+
+
+@connection.connection_handler
+def get_latest_questions(cursor, count):
+    cursor.execute("""SELECT * FROM question
+                      ORDER BY submission_time DESC
+                      LIMIT %(count)s;""",
+                   {'count': count})
+    latest_questions = cursor.fetchall()
+    return latest_questions
+
+
+# search engine
 @connection.connection_handler
 def search_in_questions(cursor, search_phrase):
     cursor.execute("""SELECT * FROM question
@@ -319,12 +333,4 @@ def search_in_answers(cursor, search_phrase):
     answer_data = cursor.fetchall()
     return answer_data
 
-
-@connection.connection_handler
-def get_latest_questions(cursor, count):
-    cursor.execute("""SELECT * FROM question
-                      ORDER BY submission_time DESC
-                      LIMIT %(count)s;""",
-                   {'count': count})
-    latest_questions = cursor.fetchall()
-    return latest_questions
+# LOGIN engine

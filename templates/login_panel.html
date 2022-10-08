@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/panel_login.css') }}">
+</head>
+<body>
+<div class="c">
+    <button class="btn btn-outline-success my-2 my-sm-0" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+    <button class="btn btn-outline-success my-2 my-sm-0" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Logout</button>
+</div>
+<div id="id01" class="modal ">
+    <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+              title="Close Modal">&times;</span>
+        <div class="center "><a href="/"><img alt="logo" src="/static/images/ask_logo.png"
+                                              width="35%" height="35%"></a></div>
+    </div>
+    <div class="container">
+        <form class="form-group c" action="{{ url_for('login') }}" method="post">
+            <h1><label>Username</label></h1>
+            <input type="text" class="form-control" name="username" placeholder="Username" id="username" required>
+            <h1><label>Password</label></h1>
+            <input type="password" class="form-control" name="password" placeholder="Password" id="password"
+                   required>
+            <h1><input type="checkbox" value="checked"><b>Remember</b></h1>
+            <h1><input type="submit" value="Login" class="form-control btn btn-primary  " name=""></h1>
+        </form>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <h1><p>You don't have an account? ☛ <a href="{{ url_for('register') }}">Register</a></p></h1>
+    </div>
+</div>
+<div id="id02" class="modal">
+
+    <div class="imgcontainer">
+        <span onclick="document.getElementById('id02').style.display='none'" class="close"
+              title="Close Modal">&times;</span>
+        <div class="center "><a href="/"><img alt="logo" src="/static/images/ask_logo.png"
+                                              width="35%" height="35%"></a></div>
+    </div>
+    <div class="container center">
+        <h3>After logging out you will be redirected to the home page</h3>
+            <button><a class="btn  my-2 my-sm-0" href="{{ url_for('logout') }}">Logout</a></button>
+    </div>
+</div>
+<script src="/static/js/login_panel.js"></script>
+</body>
+
+
+</html>

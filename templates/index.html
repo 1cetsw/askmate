@@ -5,12 +5,13 @@
 
 {% endblock %}
 {% block body %}
+    <body class="loggedin"></body>
     <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
     <h1>Latest Questions</h1>
 
-    <table   id="myTable" class="table table-hover table-dark sortable">
+    <table id="myTable" class="table table-hover table-dark sortable loggedin">
         <thead>
-        <tr class="item">
+        <tr class="item loggedin">
             <th scope="col">ID</th>
             <th scope="col">Submission Time</th>
             <th scope="col">Question</th>
@@ -34,7 +35,7 @@
 
                 <th scope="row"><a
                         href="{{ url_for('display_question', question_id=question['id']) }}">{{ question['vote_number'] }}
-                    </th>
+                </th>
                 <td><a href="{{ url_for('edit_question', question_id=question['id']) }}">Modify</a></td>
                 <td><a href="{{ url_for('delete_question', question_id=question['id']) }}">Delete</a></td>
 
