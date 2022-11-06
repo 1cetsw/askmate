@@ -70,7 +70,12 @@ hr {
 .form-group {
     margin-bottom: 15px;
     border-radius: 2em;
-    width: 60vw;
+    width: 100%;
+}
+.form-group-head {
+    margin-bottom: 15px;
+    border-radius: 2em;
+    width: 100%;
 }
 
 label {

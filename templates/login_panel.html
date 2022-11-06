@@ -17,7 +17,7 @@
                                               width="35%" height="35%"></a></div>
     </div>
     <div class="container">
-        <form class="form-group c" action="{{ url_for('login') }}" method="post">
+        <form class="form-group-head c" action="{{ url_for('login') }}" method="post">
             <h1><label>Username</label></h1>
             <input type="text" class="form-control" name="username" placeholder="Username" id="username" required>
             <h1><label>Password</label></h1>
@@ -52,9 +52,11 @@
     <div class="container center">
         <h3>After logging out you will be redirected to the home page</h3>
             <button><a class="btn  my-2 my-sm-0" href="{{ url_for('logout') }}">Logout</a></button>
+
     </div>
 </div>
 <script src="/static/js/login_panel.js"></script>
+
 </body>
 
 
